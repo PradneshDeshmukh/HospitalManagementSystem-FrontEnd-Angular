@@ -1,0 +1,28 @@
+<h1>Patient List</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>Address</th>
+            <th>Docter</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patiant of patiants">
+            <td>{{patiant.id}}</td>
+            <td>{{patiant.name}}</td>
+            <td>{{patiant.email}}</td>
+            <td>{{patiant.address}}</td>
+            <td>{{patiant.docter}}</td>
+            <td>
+                <button (click)="updatePatient(patiant.id)" class="btn btn-info">Update</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

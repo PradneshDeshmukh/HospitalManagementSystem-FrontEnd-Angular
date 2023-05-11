@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+            
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email Id</th>
+                        <th>Address</th>
+                        <th>Docter</th>
+                        <th>Actions</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let patient of patients">
+                        <td>{{patient.id}}</td>
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.email}}</td>
+                        <td>{{patient.address}}</td>
+                        <td>{{patient.docter}}</td>
+                        <td>
+                            <button (click)="updatePatient(patient.id)" class="btn btn-info">Update</button>
+                        </td>
+                        <td>
+                            <button (click)="deletPatient(patient.id)"  class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
